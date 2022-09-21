@@ -1,4 +1,4 @@
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 public class Lecturer {
 
@@ -6,9 +6,9 @@ public class Lecturer {
     private String[] modulesTaught;
     private int age;
     private final int ID;
-    private DateTime DOB;
+    private LocalDate DOB;
 
-    public DateTime getDOB() {
+    public LocalDate getDOB() {
         return DOB;
     }
 
@@ -32,7 +32,7 @@ public class Lecturer {
         this.modulesTaught = modulesTaught;
     }
 
-    public Lecturer(int ID, String name, String[] modulesTaught, int age, DateTime DOB) {
+    public Lecturer(int ID, String name, String[] modulesTaught, int age, LocalDate DOB) {
         this.ID = ID;
         this.name = name;
         this.modulesTaught = modulesTaught;

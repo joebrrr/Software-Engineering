@@ -1,13 +1,14 @@
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 
 public class Student {
-    private String name, username, course;
+    private String name, course;
     private String[] modules;
     private int age;
     private final int ID;
-    private DateTime DOB;
+    private LocalDate DOB;
 
-    public Student(String name, String course, int age, int ID, DateTime DOB, String[] modules) {
+    public Student(String name, String course, int age, int ID, LocalDate DOB, String[] modules) {
         this.name = name;
         this.age = age;
         this.course = course;
@@ -24,7 +25,7 @@ public class Student {
         return age;
     }
 
-    public DateTime getDOB() {
+    public LocalDate getDOB() {
         return DOB;
     }
 
@@ -45,7 +46,7 @@ public class Student {
     }
 
     public String getUsername() {
-        return username + ID;
+        return name + ID;
     }
 
     public String getName() {
