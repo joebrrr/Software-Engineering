@@ -1,11 +1,11 @@
 public class Module {
     private String moduleName;
     private final int ID;
-    private String[] studentsEnrolled;
+    private Student[] studentsEnrolled;
     private String[] taughtBy;
     private String[] coursesAssociated;
 
-    public Module(String name, int ID, String[] studentsEnrolled, String[] taughtBy, String[] coursesAssociated) {
+    public Module(String moduleName, int ID, Student[] studentsEnrolled, String[] taughtBy, String[] coursesAssociated) {
         this.moduleName = moduleName;
         this.ID = ID;
         this.studentsEnrolled = studentsEnrolled;
