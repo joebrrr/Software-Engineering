@@ -3,7 +3,7 @@ import org.joda.time.LocalDate;
 public class Lecturer {
 
     private String name, username;
-    private String[] modulesTaught;
+    private Module[] modulesTaught;
     private int age;
     private final int ID;
     private LocalDate DOB;
@@ -24,15 +24,15 @@ public class Lecturer {
         return name;
     }
 
-    public String[] getModulesTaught() {
+    public Module[] getModulesTaught() {
         return modulesTaught;
     }
 
-    public void setModulesTaught(String[] modulesTaught) {
+    public void setModulesTaught(Module[] modulesTaught) {
         this.modulesTaught = modulesTaught;
     }
 
-    public Lecturer(int ID, String name, String[] modulesTaught, int age, LocalDate DOB) {
+    public Lecturer(int ID, String name, Module[] modulesTaught, int age, LocalDate DOB) {
         this.ID = ID;
         this.name = name;
         this.modulesTaught = modulesTaught;
