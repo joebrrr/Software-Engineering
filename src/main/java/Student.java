@@ -24,9 +24,7 @@ public class Student {
         return age;
     }
 
-    public LocalDate getDOB() {
-        return DOB;
-    }
+    public LocalDate getDOB() { return DOB; }
 
     public ArrayList<Module> getModules() {
         return modules;

@@ -12,7 +12,25 @@ public class Module {
         this.ID = ID;
     }
 
-    public void addStudent(Student student) {
+    public int getID() { return ID; }
+
+    public String getModuleName() { return moduleName; }
+
+    public void setModuleName(String moduleName) { this.moduleName = moduleName; }
+
+    public ArrayList<CourseProgramme> getCoursesAssociated() { return coursesAssociated; }
+
+    public void setCoursesAssociated(ArrayList<CourseProgramme> coursesAssociated) { this.coursesAssociated = coursesAssociated; }
+
+    public ArrayList<Lecturer> getTaughtBy() { return taughtBy; }
+
+    public void setTaughtBy(ArrayList<Lecturer> taughtBy) { this.taughtBy = taughtBy; }
+
+    public ArrayList<Student> getStudentsEnrolled() { return studentsEnrolled; }
+
+    public void setStudentsEnrolled(ArrayList<Student> studentsEnrolled) { this.studentsEnrolled = studentsEnrolled; }
+
+    /* public void addStudent(Student student) {
         studentsEnrolled.add(student);
     }
 
@@ -22,5 +40,5 @@ public class Module {
 
     public void addCourse(CourseProgramme course) {
         coursesAssociated.add(course);
-    }
+    }*/
 }
