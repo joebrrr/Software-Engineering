@@ -52,4 +52,19 @@ public class CourseProgramme {
     public void setStudents(ArrayList<Student> students) {
         this.students = students;
     }
+
+    @Override
+    public String toString(){
+        String studentsEnrolled = "";
+        String modules = "";
+
+        for(Student student : students) {
+            studentsEnrolled += "\n" + student;
+        }
+
+        for(Module moduleAssociated : module){
+            modules += "\n" + moduleAssociated;
+        }
+        return "Course name: " + getCourseName() + "\nCourse start date: " + getStartDate() + "\nCourse end date: " + getEndDate() + "\nStudents Enrolled in course: " + studentsEnrolled + "\nModules Associated with this course: " + modules;
+    }
 }

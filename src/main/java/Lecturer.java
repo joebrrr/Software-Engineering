@@ -43,4 +43,12 @@ public class Lecturer {
         return name + ID;
     }
 
+    @Override
+    public String toString() {
+        String modules = "";
+        for(Module module : modulesTaught) {
+            modules += "\n" + modules;
+        }
+        return "Lecturer Name: " + getName() + "\nLecturer Username: " + getUsername() + "\nLecturer Age: " + getAge() + "\nLecturer Date of Birth: " + getDOB() + "\nModules Taught: " + modules;
+    }
 }

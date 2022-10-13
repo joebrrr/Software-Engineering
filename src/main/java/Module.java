@@ -30,6 +30,27 @@ public class Module {
 
     public void setStudentsEnrolled(ArrayList<Student> studentsEnrolled) { this.studentsEnrolled = studentsEnrolled; }
 
+    @Override
+    public String toString() {
+        String students = "";
+        String lecturers = "";
+        String courses = "";
+
+        for(Student student : studentsEnrolled) {
+            students += "\n" + student;
+        }
+
+        for(Lecturer lect : taughtBy){
+            lecturers += "\n" + lect;
+        }
+
+        for(CourseProgramme course : coursesAssociated) {
+            courses += "\n" + course;
+        }
+
+        return "Module name: " + getModuleName() + "\nModule ID: " + getID() + "\nCourses Associated with this module: " + courses + "\nTaught by: " + lecturers + "\nStudents Enrolled: " + students ;
+    }
+
     /* public void addStudent(Student student) {
         studentsEnrolled.add(student);
     }

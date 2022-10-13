@@ -40,4 +40,9 @@ public class Student {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "\nStudent name: " + getName() + "\nStudent Username: " + getUsername() + "\nStudent date of birth: " + getDOB() + "\nStudent Age: " + getAge();
+    }
 }
