@@ -2,13 +2,14 @@ import org.joda.time.LocalDate;
 import java.util.ArrayList;
 
 public class Student {
-    private String name, course;
+    private String name;
+    private CourseProgramme course;
     private ArrayList<Module> modules;
     private int age;
     private final int ID;
     private LocalDate DOB;
 
-    public Student(String name, String course, int age, int ID, LocalDate DOB) {
+    public Student(String name, CourseProgramme course, int age, int ID, LocalDate DOB) {
         this.name = name;
         this.age = age;
         this.course = course;
@@ -35,10 +36,10 @@ public class Student {
     }
 
     public String getCourse() {
-        return course;
+        return course.getCourseName();
     }
 
-    public void setCourse(String course) {
+    public void setCourse(CourseProgramme course) {
         this.course = course;
     }
 
