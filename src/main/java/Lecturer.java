@@ -49,6 +49,6 @@ public class Lecturer {
         for(Module module : modulesTaught) {
             modules += "\n" + modules;
         }
-        return "Lecturer Name: " + getName() + "\nLecturer Username: " + getUsername() + "\nLecturer Age: " + getAge() + "\nLecturer Date of Birth: " + getDOB() + "\nModules Taught: " + modules;
+        return "Lecturer Name: " + getName() + "\nLecturer Username: " + getUsername() + "\nLecturer Age: " + getAge() + "\nModules Taught: " + modules;
     }
 }

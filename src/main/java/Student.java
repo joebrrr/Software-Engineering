@@ -43,6 +43,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "\nStudent name: " + getName() + "\nStudent Username: " + getUsername() + "\nStudent date of birth: " + getDOB() + "\nStudent Age: " + getAge();
+        return "\nStudent name: " + getName() + "\nStudent Username: " + getUsername()  + "\nStudent Age: " + getAge();
     }
 }

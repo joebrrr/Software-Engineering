@@ -65,6 +65,6 @@ public class CourseProgramme {
         for(Module moduleAssociated : module){
             modules += "\n" + moduleAssociated;
         }
-        return "Course name: " + getCourseName() + "\nCourse start date: " + getStartDate() + "\nCourse end date: " + getEndDate() + "\nStudents Enrolled in course: " + studentsEnrolled + "\nModules Associated with this course: " + modules;
+        return "Course name: " + getCourseName() + "\nStudents Enrolled in course: " + studentsEnrolled + "\nModules Associated with this course: " + modules;
     }
 }
