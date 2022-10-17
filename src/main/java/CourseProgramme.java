@@ -59,16 +59,11 @@ public class CourseProgramme {
 
     @Override
     public String toString(){
-        String studentsEnrolled = "";
         String modules = "";
-
-        for(Student student : students) {
-            studentsEnrolled += "\n" + student;
-        }
 
         for(Module moduleAssociated : module){
             modules += "\n" + moduleAssociated;
         }
-        return "Course name: " + getCourseName() + "\nStudents Enrolled in course: " + studentsEnrolled + "\nModules Associated with this course: " + modules;
+        return "Course name: " + getCourseName() + "\nModules Associated with this course: " + modules;
     }
 }

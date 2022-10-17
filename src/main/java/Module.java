@@ -31,21 +31,14 @@ public class Module {
 
     public Lecturer getTaughtBy() { return taughtBy; }
 
-
     @Override
     public String toString() {
         String students = "";
-        String lecturers = "";
-        String courses = "";
 
         for(Student student : studentsEnrolled) {
             students += "\n" + student;
         }
 
-        for(CourseProgramme course : coursesAssociated) {
-            courses += "\n" + course;
-        }
-
-        return "Module name: " + getModuleName() + "\nModule ID: " + getID() + "\nCourses Associated with this module: " + courses + "\nTaught by: " + lecturers + "\nStudents Enrolled: " + students ;
+        return "Module name: " + getModuleName() + "\nModule ID: " + getID() + "\nTaught by: " + getTaughtBy() + "\nStudents Enrolled: " + students;
     }
 }
