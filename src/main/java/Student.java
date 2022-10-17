@@ -19,7 +19,7 @@ public class Student {
         //automatically add the student to the course
         courseRegistered.addStudent(this);
         //automatically get the list of modules from the course
-        this.modules = courseRegistered.getModule();
+        setModules(courseRegistered.getModule());
         for(Module mod: courseRegistered.getModule()) {
             mod.addStudent(this);
         }
