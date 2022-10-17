@@ -20,6 +20,8 @@ public class Student {
         courseRegistered.addStudent(this);
         //automatically get the list of modules from the course
         setModules(courseRegistered.getModule());
+
+        //add student to modules associated with course
         for(Module mod: courseRegistered.getModule()) {
             mod.addStudent(this);
         }
@@ -55,6 +57,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "\nStudent name: " + getName() + "\nStudent Username: " + getUsername()  + "\nStudent Age: " + getAge() + "\nCourse Programme registered for: " + getCourseRegistered();
+        return "\nStudent name: " + getName() + "\nStudent Username: " + getUsername()  + "\nStudent Age: " + getAge();
     }
 }
