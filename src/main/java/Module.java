@@ -7,9 +7,15 @@ public class Module {
     private ArrayList<CourseProgramme> coursesAssociated;
     private Lecturer taughtBy;
 
+    /*
+     * module name is not final as in real life a modules name does change
+     * hence why it also has a setter method
+     */
     public Module(String moduleName, int ID, Lecturer taughtBy) {
         this.moduleName = moduleName;
         this.ID = ID;
+
+        //initialize empty arrays for these variables, and then instead of a setter method, I have added a method that allows us to add individual objects to these arrays
         this.studentsEnrolled = new ArrayList<Student>();
         this.coursesAssociated = new ArrayList<CourseProgramme>();
         this.taughtBy = taughtBy;
@@ -18,6 +24,7 @@ public class Module {
         this.taughtBy.addModule(this);
     }
 
+    //getter + 'setter' methods that can add objects to the arrays initialized in the constructor
     public int getID() { return ID; }
 
     public String getModuleName() { return moduleName; }
@@ -32,6 +39,7 @@ public class Module {
 
     public Lecturer getTaughtBy() { return taughtBy; }
 
+    //overridden toString method, prints module details and lists all students enrolled
     @Override
     public String toString() {
         String students = "";

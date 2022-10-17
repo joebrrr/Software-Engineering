@@ -1,13 +1,12 @@
-import org.checkerframework.checker.units.qual.A;
 import org.joda.time.LocalDate;
 import java.util.ArrayList;
 
 public class Lecturer {
-    private String name, username;
+    private final String name;
     private ArrayList<Module> modulesTaught;
-    private int age;
+    private final int age;
     private final int ID;
-    private LocalDate DOB;
+    private final LocalDate DOB;
 
     public Lecturer(int ID, String name, int age, LocalDate DOB) {
         this.ID = ID;

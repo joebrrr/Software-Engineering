@@ -8,6 +8,7 @@ public class CourseProgramme {
     private LocalDate startDate, endDate;
 
     public CourseProgramme(String courseName, LocalDate startDate, LocalDate endDate) {
+        //init empty arrays
         this.module = new ArrayList<Module>();
         this.students = new ArrayList<Student>();
         this.courseName = courseName;
@@ -15,6 +16,7 @@ public class CourseProgramme {
         this.endDate = endDate;
     }
 
+    //getter + setter methods
     public LocalDate getEndDate() {
         return endDate;
     }
@@ -56,7 +58,7 @@ public class CourseProgramme {
         return students;
     }
 
-
+    //overridden toString method that prints the course name and all modules associated with it
     @Override
     public String toString(){
         String modules = "";
