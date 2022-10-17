@@ -64,6 +64,6 @@ public class CourseProgramme {
         for(Module moduleAssociated : module){
             modules += "\n" + moduleAssociated;
         }
-        return "Course name: " + getCourseName() + "\nModules Associated with this course: " + modules;
+        return "\nCourse name: " + getCourseName() + "\nModules Associated with this course: " + modules + "#############";
     }
 }

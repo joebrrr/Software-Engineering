@@ -45,6 +45,6 @@ public class Lecturer {
 
     @Override
     public String toString() {
-        return "Lecturer Name: " + getName() + "\nLecturer Username: " + getUsername() + "\nLecturer Age: " + getAge();
+        return "\nLecturer Name: " + getName() + "\nLecturer Username: " + getUsername() + "\nLecturer Age: " + getAge();
     }
 }

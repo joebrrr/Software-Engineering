@@ -27,6 +27,7 @@ public class Module {
     public ArrayList<Student> getStudentsEnrolled() { return studentsEnrolled; }
 
     public void addCourse(CourseProgramme course) { coursesAssociated.add(course); }
+
     public ArrayList<CourseProgramme> getCoursesAssociated() { return coursesAssociated; }
 
     public Lecturer getTaughtBy() { return taughtBy; }
@@ -39,6 +40,6 @@ public class Module {
             students += "\n" + student;
         }
 
-        return "Module name: " + getModuleName() + "\nModule ID: " + getID() + "\nTaught by: " + getTaughtBy() + "\nStudents Enrolled: " + students;
+        return "\nModule name: " + getModuleName() + "\nModule ID: " + getID() + "\nTaught by: " + getTaughtBy() + "\nStudents Enrolled: " + students;
     }
 }
