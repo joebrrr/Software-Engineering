@@ -8,6 +8,8 @@ public class CourseProgramme {
     private LocalDate startDate, endDate;
 
     public CourseProgramme(String courseName, LocalDate startDate, LocalDate endDate) {
+        this.module = new ArrayList<Module>();
+        this.students = new ArrayList<Student>();
         this.courseName = courseName;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -37,21 +39,23 @@ public class CourseProgramme {
         this.courseName = courseName;
     }
 
+    //Design choice: courses exist before modules, therefore the module will be added to the course and not vice-versa, meaning the course object should handle
+    //the logic of adding itself to the modules 'CoursesAssociated' array
+    public void addModule(Module mod) {
+        module.add(mod);
+        mod.addCourse(this);
+    }
+
     public ArrayList<Module> getModule() {
         return module;
     }
 
-    public void setModule(ArrayList<Module> module) {
-        this.module = module;
-    }
+    public void addStudent(Student stud) { students.add(stud); }
 
     public ArrayList<Student> getStudents() {
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
-    }
 
     @Override
     public String toString(){

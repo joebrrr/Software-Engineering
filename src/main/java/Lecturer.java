@@ -1,3 +1,4 @@
+import org.checkerframework.checker.units.qual.A;
 import org.joda.time.LocalDate;
 import java.util.ArrayList;
 
@@ -13,6 +14,7 @@ public class Lecturer {
         this.name = name;
         this.age = age;
         this.DOB = DOB;
+        this.modulesTaught = new ArrayList<Module>();
     }
 
     public LocalDate getDOB() {
@@ -35,9 +37,7 @@ public class Lecturer {
         return modulesTaught;
     }
 
-    public void setModulesTaught(ArrayList<Module> modulesTaught) {
-        this.modulesTaught = modulesTaught;
-    }
+    public void addModule(Module module) { modulesTaught.add(module); }
 
     public String getUsername() {
         return name + ID;
@@ -45,10 +45,6 @@ public class Lecturer {
 
     @Override
     public String toString() {
-        String modules = "";
-        for(Module module : modulesTaught) {
-            modules += "\n" + modules;
-        }
-        return "Lecturer Name: " + getName() + "\nLecturer Username: " + getUsername() + "\nLecturer Age: " + getAge() + "\nModules Taught: " + modules;
+        return "Lecturer Name: " + getName() + "\nLecturer Username: " + getUsername() + "\nLecturer Age: " + getAge();
     }
 }
